@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using Shop.Domain.Model.Category;
 
 namespace Shop.Domain.Model.Product
@@ -12,8 +13,9 @@ namespace Shop.Domain.Model.Product
         public Photos Photos { get; set; }
         public int Quantity { get; set; }
         public Price Price { get; set; }
-        public IEnumerable<Property> Properties{ get; set; }
+        public IEnumerable<Property> Properties { get; set; }
         public ProductDetails ProductDetails { get; set; }
-        public Category.Category Category{ get; set; }
+        public Category.Category Category { get; set; }
+        public IEnumerable<Medal> Medals { get; set; }
     }
 }
