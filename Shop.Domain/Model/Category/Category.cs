@@ -9,5 +9,6 @@ namespace Shop.Domain.Model.Category
         public IEnumerable<Property> Properties { get; set; }
         public string Description { get; set; }
         public IEnumerable<Product.Product> Products { get; set; }
+        public IEnumerable<Category> StrongRelations { get; set; }
     }
 }

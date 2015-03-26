@@ -6,7 +6,12 @@ namespace Shop.Application.WorkerService
 {
     public class WorkerService : IWorkerService
     {
-        private List<Worker> _workers = new List<Worker>();
+        private List<Worker> _workers;
+
+        public WorkerService()
+        {
+            _workers = new List<Worker>();
+        }
 
         public IEnumerable<Worker> GetAllWorkers()
         {

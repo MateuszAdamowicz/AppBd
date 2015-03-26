@@ -1,13 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Shop.Domain.Model.Category;
 using Shop.Domain.Model.Customer;
 
-namespace Shop.Application
+namespace Shop.Application.CustomerService
 {
     public class CustomerService: ICustomerService
     {
-        private List<Customer> _customers = new List<Customer>();
+        private List<Customer> _customers;
+
+        public CustomerService()
+        {
+            _customers = new List<Customer>();
+        }
 
         public IEnumerable<Customer> GetAllCustomers()
         {

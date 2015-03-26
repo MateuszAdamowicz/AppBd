@@ -6,7 +6,13 @@ namespace Shop.Application.OrderService
 {
     public class OrderService:IOrderService
     {
-        private List<Order> _orders = new List<Order>(); 
+        private List<Order> _orders;
+
+        public OrderService()
+        {
+            _orders = new List<Order>();
+        }
+
         public IEnumerable<Order> GetAllOrders()
         {
             return _orders;

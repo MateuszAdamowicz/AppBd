@@ -1,13 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using Shop.Domain.Model.Category;
 
-namespace Shop.Application
+namespace Shop.Application.CategoryService
 {
     public class CategoryService : ICategoryService
     {
-        private List<Category> _categories = new List<Category>();
+        private List<Category> _categories;
+
+        public CategoryService()
+        {
+            _categories = new List<Category>();
+        }
 
         public IEnumerable<Category> GetAllCategories()
         {
