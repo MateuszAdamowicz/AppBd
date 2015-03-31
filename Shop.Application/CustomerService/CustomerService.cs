@@ -1,38 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Shop.Domain.Model.Customer;
+using Shop.Domain.Model.Customer.Repository;
 
 namespace Shop.Application.CustomerService
 {
     public class CustomerService: ICustomerService
     {
-        private List<Customer> _customers;
+        private readonly ICustomerRepository _customerRepository;
 
-        public CustomerService()
+        public CustomerService(ICustomerRepository customerRepository)
         {
-            _customers = new List<Customer>();
+            _customerRepository = customerRepository;
         }
 
         public IEnumerable<Customer> GetAllCustomers()
         {
-            return _customers;
+            return _customerRepository.FindAll();
         }
 
         public void CreateNewCustomer(Customer customer)
         {
-            _customers.Add(customer);
+            _customerRepository.Insert(customer);
         }
 
         public Customer FindCustomerById(int id)
         {
-            var customer = _customers.Single(x => x.Id == id);
-            return customer;
+            return _customerRepository.Find(id);
         }
 
         public void DeleteCustomerById(int id)
         {
-            //todo Nie usuwać tylko oznaczać jako usunięte
-            _customers.Remove(FindCustomerById(id));
+            _customerRepository.Delete(id);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Shop.Domain.Model.Order
     {
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
-        public Customer Customer{ get; set; }
+        public Customer.Customer Customer{ get; set; }
         public OrderStatus OrderStatus { get; set; }
         public IEnumerable<OrderLine> Products { get; set; }
         public string Comment { get; set; }

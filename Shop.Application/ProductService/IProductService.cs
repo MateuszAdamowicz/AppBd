@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Shop.Domain.Model.Product;
+﻿using System.Collections.Generic;
 
-namespace Shop.Application
+namespace Shop.Application.ProductService
 {
     public interface IProductService
     {

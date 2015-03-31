@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Shop.Domain.Model.Order;
+﻿using System.Collections.Generic;
 
-namespace Shop.Application
+namespace Shop.Application.OrderService
 {
     public interface IOrderService
     {

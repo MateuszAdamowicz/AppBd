@@ -39,7 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerService\CustomerService.cs" />
+    <Compile Include="CustomerService\ICustomerService.cs" />
+    <Compile Include="OrderService\IOrderService.cs" />
+    <Compile Include="OrderService\OrderService.cs" />
+    <Compile Include="ProductService\IProductService.cs" />
+    <Compile Include="ProductService\PrductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkerService\IWorkerService.cs" />
+    <Compile Include="WorkerService\WorkerService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CategoryService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Domain\Shop.Domain.csproj">
+      <Project>{2514f2d6-e0c9-422f-a93b-baf7daf6577d}</Project>
+      <Name>Shop.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
