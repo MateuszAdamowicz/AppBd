@@ -7,5 +7,7 @@ namespace Shop.Application.WorkerService
     {
         IEnumerable<Worker> GetAllWorkers();
         void CreateNewWorker(Worker worker);
+        Worker FindWorkerById(int id);
+        void DeleteWorkerById(int id);
     }
 }

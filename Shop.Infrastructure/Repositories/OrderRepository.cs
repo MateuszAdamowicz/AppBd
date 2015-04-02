@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Shop.Domain.Model.Order;
+using Shop.Domain.Model.Order.Repository;
 
-namespace Shop.Domain.Model.Order.Repository
+namespace Shop.Infrastructure.Repositories
 {
     public class OrderRepository : IOrderRepository
     {

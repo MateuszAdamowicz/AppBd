@@ -8,6 +8,6 @@ namespace Shop.Domain.Model.Worker.Repository
         void Insert(Worker worker);
         void Delete(int id);
         Worker Find(int id);
-        IEnumerable<Worker> FinAll();
+        IEnumerable<Worker> FindAll();
     }
 }

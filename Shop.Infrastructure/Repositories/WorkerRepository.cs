@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Shop.Domain.Model.Worker;
+using Shop.Domain.Model.Worker.Repository;
 
-namespace Shop.Domain.Model.Worker.Repository
+namespace Shop.Infrastructure.Repositories
 {
     public class WorkerRepository : IWorkerRepository
     {
@@ -23,7 +25,7 @@ namespace Shop.Domain.Model.Worker.Repository
             return result;
         }
 
-        public IEnumerable<Worker> FinAll()
+        public IEnumerable<Worker> FindAll()
         {
             return _workers;
         }

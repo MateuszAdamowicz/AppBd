@@ -42,25 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Category\Category.cs" />
-    <Compile Include="Model\Category\Repository\CategoryRepository.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Model\Category\Repository\ICategoryRepository.cs" />
     <Compile Include="Model\Customer\Address.cs" />
     <Compile Include="Model\Customer\Customer.cs" />
     <Compile Include="Model\Customer\EmailAddress.cs" />
     <Compile Include="Model\Customer\Name.cs" />
-    <Compile Include="Model\Customer\Repository\CustomerRepository.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Model\Customer\Repository\ICustomerRepository.cs" />
     <Compile Include="Model\Order\Order.cs" />
     <Compile Include="Model\Order\OrderLine.cs" />
     <Compile Include="Model\Order\OrderStatus.cs" />
     <Compile Include="Model\Order\Repository\IOrderRepository.cs" />
-    <Compile Include="Model\Order\Repository\OrderRepository.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Model\Order\StatusName.cs" />
     <Compile Include="Model\Product\Medal.cs" />
     <Compile Include="Model\Product\Photo.cs" />
@@ -71,14 +62,8 @@
     <Compile Include="Model\Category\Property.cs" />
     <Compile Include="Model\Category\PropertyValue.cs" />
     <Compile Include="Model\Product\Repository\IProductRepository.cs" />
-    <Compile Include="Model\Product\Repository\ProductRepository.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Model\Worker\Activity.cs" />
     <Compile Include="Model\Worker\Repository\IWorkerRepository.cs" />
-    <Compile Include="Model\Worker\Repository\WorkerRepository.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Model\Worker\Role.cs" />
     <Compile Include="Model\Worker\Worker.cs">
       <SubType>Code</SubType>

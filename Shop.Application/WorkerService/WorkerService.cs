@@ -1,37 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Shop.Domain.Model.Worker;
+using Shop.Domain.Model.Worker.Repository;
 
 namespace Shop.Application.WorkerService
 {
     public class WorkerService : IWorkerService
     {
-        private List<Worker> _workers;
+        private IWorkerRepository _workerRepository;
 
-        public WorkerService()
+        public WorkerService(IWorkerRepository workerRepository)
         {
-            _workers = new List<Worker>();
+            _workerRepository = workerRepository;
         }
 
         public IEnumerable<Worker> GetAllWorkers()
         {
-            return _workers;
+            return _workerRepository.FindAll();
         }
 
         public void CreateNewWorker(Worker worker)
         {
-            _workers.Add(worker);
+            _workerRepository.Insert(worker);
         }
 
         public Worker FindWorkerById(int id)
         {
-            return _workers.Single(x => x.Id == id);
+            return _workerRepository.Find(id);
         }
 
         public void DeleteWorkerById(int id)
         {
-            var worker = FindWorkerById(id);
-            _workers.Remove(worker);
+            _workerRepository.Delete(id);
         }
     }
 }

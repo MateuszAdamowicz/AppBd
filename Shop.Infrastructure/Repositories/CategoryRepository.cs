@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Shop.Domain.Model.Category;
+using Shop.Domain.Model.Category.Repository;
 
-namespace Shop.Domain.Model.Category.Repository
+namespace Shop.Infrastructure.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
-        private IList<Category> _categories; 
+        private IList<Category> _categories;
 
         public CategoryRepository()
         {

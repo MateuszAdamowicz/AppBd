@@ -1,37 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Shop.Domain.Model.Order;
+using Shop.Domain.Model.Order.Repository;
 
 namespace Shop.Application.OrderService
 {
-    public class OrderService:IOrderService
+    public class OrderService : IOrderService
     {
-        private List<Order> _orders;
+        private IOrderRepository _orderRepository;
 
-        public OrderService()
+        public OrderService(IOrderRepository orderRepository)
         {
-            _orders = new List<Order>();
+            _orderRepository = orderRepository;
         }
 
         public IEnumerable<Order> GetAllOrders()
         {
-            return _orders;
+            return _orderRepository.FindAll();
         }
 
         public void CreateNewOrder(Order order)
         {
-            _orders.Add(order);
+            _orderRepository.Insert(order);
         }
 
         public Order FindOrderById(int id)
         {
-            return _orders.Single(x => x.Id == id);
+            return _orderRepository.Find(id);
         }
 
         public void DeleteOrderById(int id)
         {
-            var order = FindOrderById(id);
-            _orders.Remove(order);
+            _orderRepository.Delete(id);
         }
     }
 }

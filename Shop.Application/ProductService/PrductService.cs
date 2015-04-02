@@ -1,37 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Shop.Domain.Model.Product;
+using Shop.Domain.Model.Product.Repository;
 
 namespace Shop.Application.ProductService
 {
-    public class PrductService : IProductService
+    public class PrductService : IPrductService
     {
-        private List<Product> _products;
+        private IProductRepository _productRepository;
 
-        public PrductService()
+        public PrductService(IProductRepository productRepository)
         {
-            _products = new List<Product>();
+            _productRepository = productRepository;
         }
 
         public IEnumerable<Product> GetAllProducts()
         {
-            return _products;
+            return _productRepository.FindAll();
         }
 
         public void CreateNewProduct(Product product)
         {
-            _products.Add(product);
+            _productRepository.Insert(product);
         }
 
         public Product FindProductById(int id)
         {
-            return _products.Single(x => x.Id == id);
+            return _productRepository.Find(id);
         }
 
         public void DeleteProductById(int id)
         {
-            var product = FindProductById(id);
-            _products.Remove(product);
+            _productRepository.Delete(id);
         }
     }
 }

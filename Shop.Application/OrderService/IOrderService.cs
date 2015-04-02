@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Shop.Domain.Model.Order;
 
 namespace Shop.Application.OrderService
 {
@@ -6,5 +7,7 @@ namespace Shop.Application.OrderService
     {
         IEnumerable<Order> GetAllOrders();
         void CreateNewOrder(Order order);
+        Order FindOrderById(int id);
+        void DeleteOrderById(int id);
     }
 }

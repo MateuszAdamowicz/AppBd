@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Shop.Domain.Model.Product;
+using Shop.Domain.Model.Product.Repository;
 
-namespace Shop.Domain.Model.Product.Repository
+namespace Shop.Infrastructure.Repositories
 {
     public class ProductRepository : IProductRepository
     {
